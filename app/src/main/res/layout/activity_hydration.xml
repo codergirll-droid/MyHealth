@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_weight="5"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".hydration">
+
+    <TextView
+        android:id="@+id/txtwaterQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="How many glasses of water did you take?"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/numberofGlassesTaken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".4"
+        android:ems="10"
+        android:gravity="center|center_vertical"
+        android:hint="Number of glasses"
+        android:inputType="number"
+        android:textSize="20sp"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txtHydrationProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".7"
+        android:gravity="bottom|center"
+        android:text="Hydration Progress"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBarHydration"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="50"
+        android:scaleY="8"
+        android:scrollbarSize="100dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnBacktoMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        app:backgroundTint="@color/teal_200"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        tools:ignore="SpeakableTextPresentCheck" />
+</LinearLayout>
