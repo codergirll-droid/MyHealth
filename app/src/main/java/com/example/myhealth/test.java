@@ -1,12 +1,22 @@
 package com.example.myhealth;
 
-public class test extends user_stats{
+public class test extends user_info{
 
-    public static void main(String[] args) {
-        user_info u = new user_info();
 
+
+    public class user_info {
+        user_stats user = new user_stats();
+        public String userName;
+
+        public void main(String[] args) {
+            user.Name = "aa";
+            userName = user.Name;
+        }
+
+        public String getUserName() {
+            return userName;
+        }
     }
-
 
 }
 
