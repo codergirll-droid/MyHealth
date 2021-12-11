@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openActivity(){
-        Intent intent = new Intent(this, hydration.class);
+        Intent intent = new Intent(this, statistics.class);
         startActivity(intent);
     }
 
