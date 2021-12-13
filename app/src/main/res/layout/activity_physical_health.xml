@@ -145,8 +145,8 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnBacktoMain3"
-        android:layout_width="74dp"
-        android:layout_height="71dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:baselineAlignBottom="false"
         android:clickable="true"
         app:backgroundTint="@color/teal_200"
