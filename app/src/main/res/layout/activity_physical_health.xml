@@ -1,58 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How many kilometers did you walk?"
-        android:textColor="#E91E63"
-        android:textColorHighlight="#E91E63"
+        android:layout_gravity="clip_horizontal"
+        android:text="@string/how_many_kilometers_did_you_walk"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="46dp" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/DistanceInKm"
+            android:layout_width="238dp"
+            android:layout_height="68dp"
+            android:ems="10"
+            android:gravity="clip_horizontal|left|end"
+            android:hint="DistanceInKm"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/OKbtn"
+            android:layout_width="177dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|end"
+            android:text="OK" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtSteps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:text="How many steps did you take?"
+            android:textSize="34sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/StepsCount"
+            android:layout_width="157dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="StepsCount"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/OKbtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="OK" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtExtraCalorie"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="If you burned more calories , please enter."
+            android:textSize="34sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/ExtraBurnedCalories"
+            android:layout_width="184dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="ExtraBurnedCalories"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/OKbtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_weight="1"
+            android:text="OK" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtTotalCalorie"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="How many steps did you take?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="168dp" />
+        android:layout_weight="1"
+        android:text="Total Calorie Intake :"
+        android:textSize="48sp" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="If you burned extra calories , please enter."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.565"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="308dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total calories burned :"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="489dp" />
+        <EditText
+            android:id="@+id/TotalCalorieIntake"
+            android:layout_width="wrap_content"
+            android:layout_height="76dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="TotalCalorieIntake"
+            android:inputType="number" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnBacktoMain3"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        app:backgroundTint="@color/teal_200"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
