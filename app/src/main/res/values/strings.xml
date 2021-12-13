@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyHealth</string>
+    <string name="how_many_kilometers_did_you_walk">How many kilometers did you walk?</string>
 </resources>
