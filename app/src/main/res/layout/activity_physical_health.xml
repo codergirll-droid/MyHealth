@@ -22,7 +22,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/DistanceInKm"
+            android:id="@+id/txtDistanceInKm"
             android:layout_width="238dp"
             android:layout_height="68dp"
             android:ems="10"
@@ -59,7 +59,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/StepsCount"
+            android:id="@+id/txtStepsCount"
             android:layout_width="157dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -97,7 +97,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/ExtraBurnedCalories"
+            android:id="@+id/txtExtraBurnedCalories"
             android:layout_width="184dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -134,7 +134,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/TotalCalorieIntake"
+            android:id="@+id/txtTotalCalorieIntake"
             android:layout_width="wrap_content"
             android:layout_height="76dp"
             android:layout_weight="1"
