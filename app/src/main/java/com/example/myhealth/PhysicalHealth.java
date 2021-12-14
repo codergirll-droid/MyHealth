@@ -33,6 +33,15 @@ public class PhysicalHealth extends AppCompatActivity {
         stepsCount = (EditText) findViewById(R.id.txtStepsCount) ;
         ExtraBurnedCalories = (EditText) findViewById(R.id.txtExtraBurnedCalories) ;
         totalCalorie = (EditText) findViewById(R.id.txtTotalCalorieIntake) ;
+        OK_btn1 = (Button) findViewById(R.id.OKbtn) ;
+        OK_btn2 = (Button) findViewById(R.id.OKbtn2) ;
+        OK_btn3 = (Button) findViewById(R.id.OKbtn3) ;
+        backMain =(FloatingActionButton) findViewById(R.id.btnBacktoMain3) ;
+
+
+
+
+
 
 
 
