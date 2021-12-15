@@ -17,6 +17,7 @@ public class MentalHealth extends AppCompatActivity {
         VideoView videoView = (VideoView) findViewById(R.id.meditationVideo);
         VideoView videoView2 = (VideoView) findViewById(R.id.breathExerciseVideo);
 
+
         videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.meditation);
         videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.breathing_exercise);
 

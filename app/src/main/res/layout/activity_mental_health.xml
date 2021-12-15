@@ -56,7 +56,6 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnBacktoMain9"
-        tools:ignore="SpeakableTextPresentCheck"
         android:layout_width="57dp"
         android:layout_height="51dp"
         android:layout_weight="1"

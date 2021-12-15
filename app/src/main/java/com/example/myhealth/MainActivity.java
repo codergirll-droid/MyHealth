@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openActivity(){
-        Intent intent = new Intent(this, statistics.class);
+        Intent intent = new Intent(this, MentalHealth.class);
         startActivity(intent);
     }
 
