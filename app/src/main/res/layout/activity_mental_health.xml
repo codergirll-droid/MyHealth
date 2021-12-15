@@ -6,9 +6,9 @@
     android:orientation="vertical">
 
     <VideoView
-        android:id="@+id/videoView5"
+        android:id="@+id/meditationVideo"
         android:layout_width="match_parent"
-        android:layout_height="143dp" />
+        android:layout_height="194dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -18,34 +18,35 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="123dp">
+        android:layout_height="171dp">
 
         <VideoView
-            android:id="@+id/videoView6"
-            android:layout_width="306dp"
-            android:layout_height="144dp"
+            android:id="@+id/breathExerciseVideo"
+            android:layout_width="match_parent"
+            android:layout_height="173dp"
             android:layout_weight="1" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="match_parent"
-        android:layout_height="23dp"
+        android:layout_height="26dp"
         android:layout_weight="1"
         android:text="Breath Exercise Video" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="88dp"
         android:layout_weight="1"
-        android:text="                       Mental Health Progress " />
+        android:text="                    Mental Health Progress "
+        android:textSize="20sp" />
 
     <ProgressBar
         android:id="@+id/progressBarHydration3"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="148dp"
         android:layout_weight="1"
         android:indeterminate="false"
         android:max="100"
