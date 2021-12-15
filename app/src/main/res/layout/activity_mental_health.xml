@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <VideoView
+        android:id="@+id/videoView5"
+        android:layout_width="match_parent"
+        android:layout_height="143dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:text="Meditation Video" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="123dp">
+
+        <VideoView
+            android:id="@+id/videoView6"
+            android:layout_width="306dp"
+            android:layout_height="144dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:layout_weight="1"
+        android:text="Breath Exercise Video" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_weight="1"
+        android:text="                       Mental Health Progress " />
+
+    <ProgressBar
+        android:id="@+id/progressBarHydration3"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="50"
+        android:scaleY="8"
+        android:scrollbarSize="100dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnBacktoMain9"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:layout_width="57dp"
+        android:layout_height="51dp"
+        android:layout_weight="1"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        app:backgroundTint="@color/teal_200"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
 
 </LinearLayout>

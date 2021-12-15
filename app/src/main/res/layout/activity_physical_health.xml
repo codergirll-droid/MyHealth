@@ -38,20 +38,14 @@
             android:text="OK" />
     </LinearLayout>
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/txtSteps"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/txtSteps"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="right"
-            android:gravity="left"
-            android:text="How many steps did you take?"
-            android:textSize="34sp" />
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:gravity="left"
+        android:text="How many steps did you take?"
+        android:textSize="34sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,7 +55,7 @@
         <EditText
             android:id="@+id/txtStepsCount"
             android:layout_width="157dp"
-            android:layout_height="60dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
             android:hint="StepsCount"
@@ -75,20 +69,13 @@
             android:text="OK" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/txtExtraCalorie"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="If you burned more calories , please enter."
-            android:textSize="34sp" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/txtExtraCalorie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="If you burned more calories , please enter."
+        android:textSize="34sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -99,7 +86,7 @@
         <EditText
             android:id="@+id/txtExtraBurnedCalories"
             android:layout_width="184dp"
-            android:layout_height="match_parent"
+            android:layout_height="59dp"
             android:layout_weight="1"
             android:ems="10"
             android:hint="ExtraBurnedCalories"
@@ -113,13 +100,6 @@
             android:text="OK" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-    </LinearLayout>
-
     <TextView
         android:id="@+id/txtTotalCalorie"
         android:layout_width="match_parent"
@@ -128,24 +108,18 @@
         android:text="Total Calorie Intake :"
         android:textSize="48sp" />
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/txtTotalCalorieIntake"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/txtTotalCalorieIntake"
-            android:layout_width="wrap_content"
-            android:layout_height="76dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="TotalCalorieIntake"
-            android:inputType="number" />
-    </LinearLayout>
+        android:layout_height="82dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="TotalCalorieIntake"
+        android:inputType="number" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnBacktoMain3"
-        android:layout_width="wrap_content"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:baselineAlignBottom="false"
         android:clickable="true"
