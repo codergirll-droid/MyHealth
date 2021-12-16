@@ -13,9 +13,6 @@
             android:name=".statistics"
             android:exported="true" />
         <activity
-            android:name=".generalHealthTips"
-            android:exported="true" />
-        <activity
             android:name=".hydration"
             android:exported="true" />
         <activity

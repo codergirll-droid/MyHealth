@@ -10,12 +10,15 @@
         <entry key="..\:/Users/UzayIsin/Documents/GitHub/MyHealth/app/src/main/res/layout/activity_nutrition.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/UzayIsin/Documents/GitHub/MyHealth/app/src/main/res/layout/activity_physical_health.xml" value="0.2" />
         <entry key="..\:/Users/UzayIsin/Documents/GitHub/MyHealth/app/src/main/res/layout/activity_statistics.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hp/Desktop/MyHealth/app/src/main/res/layout/activity_general_health_tips.xml" value="0.19429347826086957" />
         <entry key="..\:/Users/hp/Desktop/MyHealth/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/hp/Desktop/MyHealth/app/src/main/res/layout/activity_mental_health.xml" value="0.20018115942028986" />
+        <entry key="..\:/Users/hp/Desktop/MyHealth/app/src/main/res/layout/fragment_article.xml" value="0.1" />
+        <entry key="..\:/Users/hp/Desktop/MyHealth/app/src/main/res/layout/fragment_article_list.xml" value="0.19429347826086957" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
