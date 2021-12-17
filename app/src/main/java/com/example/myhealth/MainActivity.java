@@ -35,5 +35,12 @@ public class MainActivity extends AppCompatActivity implements ArticleFragment.O
     @Override
     public void articleSelected(Article article) {
         Log.d("Main activity", article.getHeader());
+
+        Intent intent = new Intent(this, DetailsActivity.class);
+
+        intent.putExtra("article", article);
+
+        startActivity(intent);
+
     }
 }
