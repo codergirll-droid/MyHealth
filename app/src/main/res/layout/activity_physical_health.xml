@@ -23,19 +23,13 @@
 
         <EditText
             android:id="@+id/txtDistanceInKm"
-            android:layout_width="238dp"
-            android:layout_height="68dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:ems="10"
             android:gravity="clip_horizontal|left|end"
             android:hint="DistanceInKm"
             android:inputType="numberDecimal" />
 
-        <Button
-            android:id="@+id/OKbtn"
-            android:layout_width="177dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="right|end"
-            android:text="OK" />
     </LinearLayout>
 
     <TextView
@@ -61,12 +55,6 @@
             android:hint="StepsCount"
             android:inputType="numberDecimal" />
 
-        <Button
-            android:id="@+id/OKbtn2"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:text="OK" />
     </LinearLayout>
 
     <TextView
@@ -92,13 +80,15 @@
             android:hint="ExtraBurnedCalories"
             android:inputType="numberDecimal" />
 
-        <Button
-            android:id="@+id/OKbtn3"
-            android:layout_width="wrap_content"
-            android:layout_height="58dp"
-            android:layout_weight="1"
-            android:text="OK" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="Button" />
 
     <TextView
         android:id="@+id/txtTotalCalorie"
