@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements ArticleFragment.OnArticleSelected{
+public class MainActivity extends AppCompatActivity{
 
     Button testButton;
 
@@ -28,19 +28,9 @@ public class MainActivity extends AppCompatActivity implements ArticleFragment.O
     }
 
     public void openActivity(){
-        Intent intent = new Intent(this, hydration.class);
+        Intent intent = new Intent(this, fragment.class);
         startActivity(intent);
     }
 
-    @Override
-    public void articleSelected(Article article) {
-        Log.d("Main activity", article.getHeader());
 
-        Intent intent = new Intent(this, DetailsActivity.class);
-
-        intent.putExtra("article", article);
-
-        startActivity(intent);
-
-    }
 }
