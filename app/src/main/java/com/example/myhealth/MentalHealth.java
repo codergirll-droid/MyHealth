@@ -1,7 +1,9 @@
 package com.example.myhealth;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.MediaController;
+import android.widget.ProgressBar;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +14,8 @@ public class MentalHealth extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mental_health);
+
+        ProgressBar vProgress ;
 
 
         VideoView videoView = (VideoView) findViewById(R.id.meditationVideo);
@@ -33,6 +37,8 @@ public class MentalHealth extends AppCompatActivity {
         videoView.start();
         videoView2.start();
 
+        vProgress = (ProgressBar) findViewById(R.id.videoProgress);
+        vProgress.setVisibility(View.VISIBLE);
 
-    }
-}
+
+}}
