@@ -50,15 +50,33 @@ public class PhysicalHealth extends AppCompatActivity {
         btnENTER.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                countOfSteps = Integer.parseInt(stepsCount.getText().toString());
-                kmCount =Integer.parseInt(distance.getText().toString());
-                calorieCount = Integer.parseInt(ExtraBurnedCalories.getText().toString());
+                    int a = 0, b = 0, c=0 , total;
+                    if (txtDistance.getText() != null && !txtDistance.getText().toString().equals("")) {
+                        try {
+                            a = Integer.parseInt(txtDistance.getText().toString());
+                        } catch (Exception e) {
+                            a = 0;
+                        }
+                    }
 
-                showToast(countOfSteps);
-                showToast(kmCount);
-                showToast(calorieCount);
-            }
-        });
+                    if (stepsCount.getText() != null && !stepsCount.getText().toString().equals("")) {
+                        try {
+                            b = Integer.parseInt(stepsCount.getText().toString());
+                        } catch (Exception e) {
+                            b = 0;
+                        }
+                    }
+                    if (ExtraBurnedCalories.getText() != null && !ExtraBurnedCalories.getText().toString().equals("")) {
+                        try {
+                            c = Integer.parseInt(ExtraBurnedCalories.getText().toString());
+                        } catch (Exception e) {
+                            c = 0;
+                        }
+                    }
+                    total = a + b + c;
+                    totalCalorieIntake.setText(String.valueOf(total));
+                }
+            });
 
         backMain =(FloatingActionButton) findViewById(R.id.btnBacktoMain3) ;
         backMain.setOnClickListener(new View.OnClickListener() {
