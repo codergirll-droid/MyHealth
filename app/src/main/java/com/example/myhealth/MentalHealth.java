@@ -22,8 +22,8 @@ public class MentalHealth extends AppCompatActivity {
         VideoView videoView2 = (VideoView) findViewById(R.id.breathExerciseVideo);
 
 
-        videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.meditation);
-        videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.breathing_exercise);
+        videoView.setVideoPath("android.resource://com.example.myhealth/" + R.raw.meditation);
+        videoView.setVideoPath("android.resource://com.example.myhealth/" + R.raw.breathing_exercise);
 
 
         MediaController mediaController = new MediaController(this);
@@ -41,4 +41,5 @@ public class MentalHealth extends AppCompatActivity {
         vProgress.setVisibility(View.VISIBLE);
 
 
-}}
+}
+}
