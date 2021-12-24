@@ -1,35 +1,106 @@
 package com.example.myhealth;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.File;
+
 public class MainActivity extends AppCompatActivity{
 
-    Button testButton;
+    Button goToPhysicalHealth;
+    Button goToMentalHealth;
+    Button goToNutrition;
+    Button goToHydration;
+    Button goToGeneralHealthTips;
+    Button goToStatistics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        testButton = (Button) findViewById(R.id.testButton);
-        testButton.setOnClickListener(new View.OnClickListener() {
+        goToPhysicalHealth = (Button) findViewById(R.id.goToPhysicalHealth);
+        goToPhysicalHealth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity();
+                openActivity("physicalHealth");
+            }
+        });
+        goToMentalHealth = (Button) findViewById(R.id.goToMentalHealth);
+        goToMentalHealth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity("mentalHealth");
+            }
+        });
+        goToNutrition = (Button) findViewById(R.id.goToNutrition);
+        goToNutrition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity("nutrition");
+            }
+        });
+        goToHydration = (Button) findViewById(R.id.goToHydration);
+        goToHydration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity("hydration");
+            }
+        });
+        goToGeneralHealthTips = (Button) findViewById(R.id.goToGeneralHealthTips);
+        goToGeneralHealthTips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity("tips");
+            }
+        });
+        goToStatistics = (Button) findViewById(R.id.goToStatistics);
+        goToStatistics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity("stats");
             }
         });
 
     }
 
-    public void openActivity(){
-        Intent intent = new Intent(this, fragment.class);
-        startActivity(intent);
+    public void openActivity(String className){
+        Intent intent;
+        switch (className){
+            case "physicalHealth":
+                intent = new Intent(this, PhysicalHealth.class);
+                startActivity(intent);
+                break;
+            case "mentalHealth":
+                intent = new Intent(this, MentalHealth.class);
+                startActivity(intent);
+                break;
+            case "nutrition":
+                intent = new Intent(this, Nutrition.class);
+                startActivity(intent);
+                break;
+            case "hydration":
+                intent = new Intent(this, hydration.class);
+                startActivity(intent);
+                break;
+            case "tips":
+                intent = new Intent(this, fragment.class);
+                startActivity(intent);
+                break;
+            case "stats":
+                intent = new Intent(this, statistics.class);
+                startActivity(intent);
+                break;
+
+        }
+
+
+
     }
 
 
