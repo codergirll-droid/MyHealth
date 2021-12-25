@@ -28,21 +28,21 @@ public class MainActivity extends AppCompatActivity{
         goToPhysicalHealth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity("physicalHealth");
+                openActivity("PhysicalHealth");
             }
         });
         goToMentalHealth = (Button) findViewById(R.id.goToMentalHealth);
         goToMentalHealth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity("mentalHealth");
+                openActivity("MentalHealth");
             }
         });
         goToNutrition = (Button) findViewById(R.id.goToNutrition);
         goToNutrition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity("nutrition");
+                openActivity("Nutrition");
             }
         });
         goToHydration = (Button) findViewById(R.id.goToHydration);
@@ -72,15 +72,15 @@ public class MainActivity extends AppCompatActivity{
     public void openActivity(String className){
         Intent intent;
         switch (className){
-            case "physicalHealth":
+            case "PhysicalHealth":
                 intent = new Intent(this, PhysicalHealth.class);
                 startActivity(intent);
                 break;
-            case "mentalHealth":
+            case "MentalHealth":
                 intent = new Intent(this, MentalHealth.class);
                 startActivity(intent);
                 break;
-            case "nutrition":
+            case "Nutrition":
                 intent = new Intent(this, Nutrition.class);
                 startActivity(intent);
                 break;

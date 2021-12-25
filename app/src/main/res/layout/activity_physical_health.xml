@@ -87,6 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:onClick="onButtonClick"
         android:layout_weight="1"
         android:text="Button" />
 
@@ -98,14 +99,11 @@
         android:text="Total Calorie Intake :"
         android:textSize="48sp" />
 
-    <EditText
-        android:id="@+id/txtTotalCalorieIntake"
+    <TextView
+        android:id="@+id/totalCalorieIntake"
         android:layout_width="match_parent"
-        android:layout_height="82dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:hint="TotalCalorieIntake"
-        android:inputType="number" />
+        android:layout_height="89dp"
+        android:text="total" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnBacktoMain3"
