@@ -40,6 +40,5 @@ public class MentalHealth extends AppCompatActivity {
         vProgress = (ProgressBar) findViewById(R.id.videoProgress);
         vProgress.setVisibility(View.VISIBLE);
 
-
 }
 }
