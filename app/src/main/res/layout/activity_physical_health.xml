@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/txtDistance"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="107dp"
         android:layout_gravity="clip_horizontal"
         android:text="@string/how_many_kilometers_did_you_walk"
         android:textSize="34sp"
@@ -24,10 +24,10 @@
         <EditText
             android:id="@+id/txtDistanceInKm"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="56dp"
             android:ems="10"
             android:gravity="clip_horizontal|left|end"
-            android:hint="DistanceInKm"
+            android:hint="                             DistanceInKm"
             android:inputType="numberDecimal" />
 
     </LinearLayout>
@@ -35,7 +35,7 @@
     <TextView
         android:id="@+id/txtSteps"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="106dp"
         android:layout_gravity="right"
         android:gravity="left"
         android:text="How many steps did you take?"
@@ -52,7 +52,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="StepsCount"
+            android:hint="                              StepsCount"
             android:inputType="numberDecimal" />
 
     </LinearLayout>
@@ -60,7 +60,7 @@
     <TextView
         android:id="@+id/txtExtraCalorie"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="115dp"
         android:layout_weight="1"
         android:text="If you burned more calories , please enter."
         android:textSize="34sp" />
@@ -84,26 +84,27 @@
 
     <Button
         android:id="@+id/btnEnter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="116dp"
+        android:layout_height="62dp"
         android:layout_gravity="center"
-        android:onClick="onButtonClick"
         android:layout_weight="1"
+        android:onClick="onButtonClick"
         android:text="Button" />
 
     <TextView
         android:id="@+id/txtTotalCalorie"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="58dp"
         android:layout_weight="1"
-        android:text="Total Calorie Intake :"
-        android:textSize="48sp" />
+        android:text="    Total Calories Burned:"
+        android:textSize="34sp" />
 
     <TextView
-        android:id="@+id/totalCalorieIntake"
+        android:id="@+id/totalCalorieBurned"
         android:layout_width="match_parent"
-        android:layout_height="89dp"
-        android:text="total" />
+        android:layout_height="58dp"
+        android:hint="              Total"
+        android:textSize="34sp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnBacktoMain3"

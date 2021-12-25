@@ -16,7 +16,7 @@ public class MentalHealth extends AppCompatActivity {
         setContentView(R.layout.activity_mental_health);
 
         ProgressBar vProgress ;
-
+        int progressValue ;
 
         VideoView videoView = (VideoView) findViewById(R.id.meditationVideo);
         VideoView videoView2 = (VideoView) findViewById(R.id.breathExerciseVideo);
@@ -31,6 +31,7 @@ public class MentalHealth extends AppCompatActivity {
         mediaController.setAnchorView(videoView);
         //allow mediaController to control our videoView
         mediaController.setAnchorView(videoView2);
+
         videoView.setMediaController(mediaController);
         videoView2.setMediaController(mediaController);
 
@@ -38,7 +39,5 @@ public class MentalHealth extends AppCompatActivity {
         videoView2.start();
 
         vProgress = (ProgressBar) findViewById(R.id.videoProgress);
-        vProgress.setVisibility(View.VISIBLE);
-
 }
 }

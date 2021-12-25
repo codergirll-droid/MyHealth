@@ -29,12 +29,9 @@ public class PhysicalHealth extends AppCompatActivity {
 
 
         txtDistance = (EditText) findViewById(R.id.txtDistanceInKm);
-
         stepsCount = (EditText) findViewById(R.id.txtStepsCount);
-
         ExtraBurnedCalories = (EditText) findViewById(R.id.txtExtraBurnedCalories);
-
-        totalCalorie = (TextView) findViewById(R.id.totalCalorieIntake);
+        totalCalorie = (TextView) findViewById(R.id.totalCalorieBurned);
 
 
 

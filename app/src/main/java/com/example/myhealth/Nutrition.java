@@ -1,4 +1,6 @@
 package com.example.myhealth;
 
-public class Nutrition {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Nutrition extends AppCompatActivity {
 }

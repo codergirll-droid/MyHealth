@@ -8,13 +8,15 @@
     <VideoView
         android:id="@+id/meditationVideo"
         android:layout_width="match_parent"
-        android:layout_height="194dp" />
+        android:layout_height="167dp"
+        android:layout_weight="2" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="27dp"
-        android:text="Meditation Video" />
+        android:layout_height="44dp"
+        android:text="Meditation Video"
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,21 +25,23 @@
         <VideoView
             android:id="@+id/breathExerciseVideo"
             android:layout_width="match_parent"
-            android:layout_height="173dp"
-            android:layout_weight="1" />
+            android:layout_height="326dp"
+            android:layout_weight="2"
+            android:scrollbarSize="4dp" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="match_parent"
-        android:layout_height="26dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Breath Exercise Video" />
+        android:text="Breath Exercise Video"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
-        android:layout_height="88dp"
+        android:layout_height="28dp"
         android:layout_weight="1"
         android:text="                    Mental Health Progress "
         android:textSize="20sp" />
@@ -46,10 +50,10 @@
         android:id="@+id/videoProgress"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
-        android:layout_height="148dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:max="100"
-        android:progress="50"
+        android:progress="0"
         android:scaleY="8"
         android:scrollbarSize="100dp" />
 

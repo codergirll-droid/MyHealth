@@ -22,6 +22,15 @@
             android:name=".hydration"
             android:exported="true" />
         <activity
+            android:name=".PhysicalHealth"
+            android:exported="true" />
+        <activity
+            android:name=".MentalHealth"
+            android:exported="true" />
+        <activity
+            android:name=".Nutrition"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
