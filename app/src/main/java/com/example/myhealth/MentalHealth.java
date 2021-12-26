@@ -1,43 +1,76 @@
 package com.example.myhealth;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.View;
+
 import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MentalHealth extends AppCompatActivity {
 
-    @Override
+    ProgressBar vProgress;
+    VideoView videoView;
+    VideoView videoView2;
+    FloatingActionButton btnMain ;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mental_health);
 
-        ProgressBar vProgress ;
-        int progressValue ;
 
-        VideoView videoView = (VideoView) findViewById(R.id.meditationVideo);
-        VideoView videoView2 = (VideoView) findViewById(R.id.breathExerciseVideo);
+        vProgress = (ProgressBar) findViewById(R.id.videoProgress);
+        videoView = (VideoView) findViewById(R.id.meditationVideo);
+        videoView2 = (VideoView) findViewById(R.id.breathExerciseVideo);
+        btnMain = (FloatingActionButton) findViewById(R.id.btnBacktoMain9);
 
 
         videoView.setVideoPath("android.resource://com.example.myhealth/" + R.raw.meditation);
-        videoView.setVideoPath("android.resource://com.example.myhealth/" + R.raw.breathing_exercise);
+        videoView2.setVideoPath("android.resource://com.example.myhealth/" + R.raw.breathing_exercise);
 
 
         MediaController mediaController = new MediaController(this);
         //link mediaController to videoView
         mediaController.setAnchorView(videoView);
         //allow mediaController to control our videoView
-        mediaController.setAnchorView(videoView2);
-
         videoView.setMediaController(mediaController);
-        videoView2.setMediaController(mediaController);
+        videoView.requestFocus();
 
-        videoView.start();
-        videoView2.start();
 
-        vProgress = (ProgressBar) findViewById(R.id.videoProgress);
-}
-}
+        MediaController mediaController2 = new MediaController(this);
+        videoView2.setMediaController(mediaController2);
+        mediaController2.setAnchorView(videoView2);
+        videoView2.requestFocus();
+
+
+        Thread view1=new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_DISPLAY);
+                videoView.start();
+            }
+        });
+
+        Thread view2=new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_DISPLAY);
+                videoView2.start();
+            }
+        });
+
+
+
+    }}
+

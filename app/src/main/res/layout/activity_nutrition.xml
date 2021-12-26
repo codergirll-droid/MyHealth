@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtFoods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What did you eat today? Pick from below : "
+        android:textSize="34sp" />
+
+    <CheckBox
+        android:id="@+id/food"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Apple"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/food1"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Egg"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/food2"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Pasta"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/food3"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Pizza"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/food4"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Broccoli"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/food5"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Banana"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnBacktoMain4"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAlignBottom="false"
+            android:clickable="true"
+            app:backgroundTint="@color/teal_200"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    </LinearLayout>
+
+</LinearLayout>
