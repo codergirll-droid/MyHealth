@@ -1,8 +1,10 @@
 package com.example.myhealth;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
+import android.view.View;
 import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.VideoView;
@@ -29,7 +31,6 @@ public class MentalHealth extends AppCompatActivity {
         vProgress = (ProgressBar) findViewById(R.id.videoProgress);
         videoView = (VideoView) findViewById(R.id.meditationVideo);
         videoView2 = (VideoView) findViewById(R.id.breathExerciseVideo);
-        btnMain = (FloatingActionButton) findViewById(R.id.btnBacktoMain9);
 
 
         videoView.setVideoPath("android.resource://com.example.myhealth/" + R.raw.meditation);
@@ -50,7 +51,7 @@ public class MentalHealth extends AppCompatActivity {
         videoView2.requestFocus();
 
 
-        Thread view1=new Thread(new Runnable() {
+        Thread view1 = new Thread(new Runnable() {
 
             @Override
             public void run() {
@@ -60,17 +61,29 @@ public class MentalHealth extends AppCompatActivity {
             }
         });
 
-        Thread view2=new Thread(new Runnable() {
+        Thread view2 = new Thread(new Runnable() {
 
             @Override
             public void run() {
-                // TODO Auto-generated method stub
                 android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_DISPLAY);
                 videoView2.start();
             }
         });
 
 
+        btnMain = (FloatingActionButton) findViewById(R.id.btnBacktoMain9);
+        btnMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToMain2();
 
-    }}
+            }
+        });
+    }
+    public void goToMain2() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+}
 

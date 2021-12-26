@@ -5,16 +5,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <VideoView
-        android:id="@+id/meditationVideo"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="131dp"
-        android:layout_weight="2" />
+        android:layout_height="112dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <VideoView
+            android:id="@+id/meditationVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="38dp"
         android:text="Meditation Video"
         android:textSize="20sp" />
 
@@ -25,8 +31,7 @@
         <VideoView
             android:id="@+id/breathExerciseVideo"
             android:layout_width="match_parent"
-            android:layout_height="326dp"
-            android:layout_weight="2"
+            android:layout_height="match_parent"
             android:scrollbarSize="4dp" />
     </LinearLayout>
 
@@ -41,7 +46,7 @@
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
-        android:layout_height="28dp"
+        android:layout_height="22dp"
         android:layout_weight="1"
         android:text="                    Mental Health Progress "
         android:textSize="20sp" />
@@ -50,7 +55,7 @@
         android:id="@+id/videoProgress"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="16dp"
         android:layout_weight="1"
         android:max="100"
         android:progress="0"
@@ -59,8 +64,8 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnBacktoMain9"
-        android:layout_width="57dp"
-        android:layout_height="51dp"
+        android:layout_width="71dp"
+        android:layout_height="151dp"
         android:layout_weight="1"
         android:baselineAlignBottom="false"
         android:clickable="true"
