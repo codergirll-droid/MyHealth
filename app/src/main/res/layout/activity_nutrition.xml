@@ -9,66 +9,75 @@
     <TextView
         android:id="@+id/txtFoods"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="85dp"
         android:text="What did you eat today? Pick from below : "
         android:textSize="34sp" />
 
     <CheckBox
-        android:id="@+id/food"
+        android:id="@+id/apple"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="85dp"
         android:text="Apple"
         android:textSize="24sp" />
 
     <CheckBox
-        android:id="@+id/food1"
+        android:id="@+id/egg"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="85dp"
         android:text="Egg"
         android:textSize="24sp" />
 
     <CheckBox
-        android:id="@+id/food2"
+        android:id="@+id/pasta"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="85dp"
         android:text="Pasta"
         android:textSize="24sp" />
 
     <CheckBox
-        android:id="@+id/food3"
+        android:id="@+id/pizza"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="85dp"
         android:text="Pizza"
         android:textSize="24sp" />
 
     <CheckBox
-        android:id="@+id/food4"
+        android:id="@+id/broccoli"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="85dp"
         android:text="Broccoli"
         android:textSize="24sp" />
 
     <CheckBox
-        android:id="@+id/food5"
+        android:id="@+id/banana"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="85dp"
         android:text="Banana"
         android:textSize="24sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btnBacktoMain4"
+            android:id="@+id/btnBack1"
             android:layout_width="66dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="left"
             android:layout_weight="1"
             android:baselineAlignBottom="false"
             android:clickable="true"
             app:backgroundTint="@color/teal_200"
             app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_action_next" />
 
     </LinearLayout>
 
