@@ -40,7 +40,6 @@ public class Nutrition extends AppCompatActivity {
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Nutrition.this, foods.class));
 
                 Intent intent = new Intent(Nutrition.this, foods.class);
                 intent.putExtra("Apple", apple.isChecked());
@@ -50,6 +49,7 @@ public class Nutrition extends AppCompatActivity {
                 intent.putExtra("Broccoli", broccoli.isChecked());
                 intent.putExtra("Banana", banana.isChecked());
                 startActivity(intent);
+
             }
 
         });
