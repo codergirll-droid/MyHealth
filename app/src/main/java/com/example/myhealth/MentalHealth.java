@@ -22,6 +22,7 @@ public class MentalHealth extends AppCompatActivity {
     VideoView videoView;
     VideoView videoView2;
     FloatingActionButton btnMain ;
+    int progress ;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +34,7 @@ public class MentalHealth extends AppCompatActivity {
         videoView2 = (VideoView) findViewById(R.id.breathExerciseVideo);
 
         vProgress.setMax(100);
+        progress =vProgress.getProgress();
 
 
         videoView.setVideoPath("android.resource://com.example.myhealth/" + R.raw.meditation);
@@ -59,7 +61,7 @@ public class MentalHealth extends AppCompatActivity {
             public void run() {
                 // TODO Auto-generated method stub
                 android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_DISPLAY);
-                vProgress.setProgress(1);  // value of increment
+                vProgress.setProgress(progress++);  // value of increment
                 videoView.start();
             }
         });
@@ -69,7 +71,7 @@ public class MentalHealth extends AppCompatActivity {
             @Override
             public void run() {
                 android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_DISPLAY);
-                vProgress.setProgress(1);  // value of increment
+                vProgress.setProgress(progress++);  // value of increment
                 videoView2.start();
             }
         });
