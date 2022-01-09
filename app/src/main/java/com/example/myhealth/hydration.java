@@ -3,16 +3,34 @@ package com.example.myhealth;
 
 import static java.lang.Integer.parseInt;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.ListenerRegistration;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class hydration extends AppCompatActivity {
 
@@ -21,6 +39,10 @@ public class hydration extends AppCompatActivity {
     ProgressBar pbHydration; //progress bar of hydration
     Button okButton; //ok button for the input
     FloatingActionButton backtoMain; //button to return to main menu
+
+    //**********************************************
+    FirebaseFirestore db;
+    ArrayList<user_stats> users = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +59,14 @@ public class hydration extends AppCompatActivity {
         getIntFromDatabaseAndDisplayInEdittext();
         updateBar();
 
+
         //SETTING UP ONCLICKLISTENER FOR OKBUTTON
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateBar();
+                test();
+
             }
         });
 
@@ -49,10 +74,16 @@ public class hydration extends AppCompatActivity {
         backtoMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    goToMain();
+                goToMain();
 
+                //****************************************
             }
         });
+
+
+        //*********************************************************
+
+
 
 
     }
@@ -90,5 +121,59 @@ public class hydration extends AppCompatActivity {
     public void setProgressBarMaxValue(){
 
     }
+
+
+    //*****************************************************
+
+/*
+    user_stats createUser(){
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        user_stats user = new user_stats();
+        user.setId(db.collection("users").document().getId());
+        return user;
+    }
+
+
+    void updateHydration(user_stats user){
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        user.setWaterDrunk(numberofTakenGlasses);
+        db.collection("users").document(user.getId()).set(user);
+    }
+
+ */
+
+
+    void test(){
+        db = FirebaseFirestore.getInstance();
+
+        String id = db.collection("users").document().getId();
+        Log.d("Document id: ", id);
+
+/*
+        Map<Object, Object> user = new HashMap<>();
+        user.put("Hydration", numberofTakenGlasses);
+        user.put("Name", "Ayse");
+
+
+        db.collection("user").add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                Toast.makeText(hydration.this, "Successful", Toast.LENGTH_SHORT).show();
+            }
+        })
+.addOnFailureListener(new OnFailureListener() {
+    @Override
+    public void onFailure(@NonNull Exception e) {
+        Toast.makeText(hydration.this, "Failed", Toast.LENGTH_SHORT).show();
+
+    }
+});
+
+
+ */
+
+    }
+
+
 
 }

@@ -1,6 +1,13 @@
 package com.example.myhealth;
 
+import com.google.firebase.firestore.Exclude;
+
 public class user_stats {
+
+
+
+    @Exclude
+    public String id;
     public String Name;
     public int Age = 18;
     public int Height = 160;
@@ -142,6 +149,14 @@ public class user_stats {
 
 
     public user_stats() {
+    }
+
+    public String  getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 }
