@@ -6,114 +6,131 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txtDistance"
-        android:layout_width="wrap_content"
-        android:layout_height="107dp"
-        android:layout_gravity="clip_horizontal"
-        android:text="@string/how_many_kilometers_did_you_walk"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/txtDistanceInKm"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:ems="10"
-            android:gravity="clip_horizontal|left|end"
-            android:hint="                             DistanceInKm"
-            android:inputType="numberDecimal" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/txtDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="107dp"
+                android:layout_gravity="clip_horizontal"
+                android:text="@string/how_many_kilometers_did_you_walk"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/txtSteps"
-        android:layout_width="match_parent"
-        android:layout_height="106dp"
-        android:layout_gravity="right"
-        android:gravity="left"
-        android:text="How many steps did you take?"
-        android:textSize="34sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/txtDistanceInKm"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:ems="10"
+                    android:gravity="clip_horizontal|left|end"
+                    android:hint="                             DistanceInKm"
+                    android:inputType="numberDecimal" />
 
-        <EditText
-            android:id="@+id/txtStepsCount"
-            android:layout_width="157dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="                              StepsCount"
-            android:inputType="numberDecimal" />
+            </LinearLayout>
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/txtSteps"
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:layout_gravity="right"
+                android:gravity="left"
+                android:text="How many steps did you take?"
+                android:textSize="34sp" />
 
-    <TextView
-        android:id="@+id/txtExtraCalorie"
-        android:layout_width="wrap_content"
-        android:layout_height="115dp"
-        android:layout_weight="1"
-        android:text="If you burned more calories , please enter."
-        android:textSize="34sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/txtStepsCount"
+                    android:layout_width="157dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="                              StepsCount"
+                    android:inputType="numberDecimal" />
 
-        <EditText
-            android:id="@+id/txtExtraBurnedCalories"
-            android:layout_width="184dp"
-            android:layout_height="59dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="ExtraBurnedCalories"
-            android:inputType="numberDecimal" />
+            </LinearLayout>
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/txtExtraCalorie"
+                android:layout_width="wrap_content"
+                android:layout_height="115dp"
+                android:layout_weight="1"
+                android:text="If you burned more calories , please enter."
+                android:textSize="34sp" />
 
-    <Button
-        android:id="@+id/btnEnter"
-        android:layout_width="116dp"
-        android:layout_height="62dp"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:onClick="onButtonClick"
-        android:text="Button" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/txtTotalCalorie"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:layout_weight="1"
-        android:text="    Total Calories Burned:"
-        android:textSize="34sp" />
+                <EditText
+                    android:id="@+id/txtExtraBurnedCalories"
+                    android:layout_width="184dp"
+                    android:layout_height="59dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="ExtraBurnedCalories"
+                    android:inputType="numberDecimal" />
 
-    <TextView
-        android:id="@+id/totalCalorieBurned"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:hint="              Total"
-        android:textSize="34sp" />
+            </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnBacktoMain3"
-        android:layout_width="88dp"
-        android:layout_height="wrap_content"
-        android:baselineAlignBottom="false"
-        android:clickable="true"
-        app:backgroundTint="@color/teal_200"
-        app:srcCompat="?attr/actionModeCloseDrawable"
-        tools:ignore="SpeakableTextPresentCheck" />
+            <Button
+                android:id="@+id/btnEnter"
+                android:layout_width="116dp"
+                android:layout_height="62dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="onButtonClick"
+                android:text="Button" />
+
+            <TextView
+                android:id="@+id/txtTotalCalorie"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_weight="1"
+                android:text="    Total Calories Burned:"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/totalCalorieBurned"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="              Total"
+                android:textSize="34sp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnBacktoMain3"
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:baselineAlignBottom="false"
+                android:clickable="true"
+                app:backgroundTint="@color/teal_200"
+                app:srcCompat="?attr/actionModeCloseDrawable"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
