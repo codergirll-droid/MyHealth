@@ -86,7 +86,7 @@
                     android:layout_height="59dp"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="ExtraBurnedCalories"
+                    android:hint="                         ExtraBurnedCalories"
                     android:inputType="numberDecimal" />
 
             </LinearLayout>
@@ -117,7 +117,7 @@
                 android:id="@+id/totalCalorieBurned"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
-                android:hint="              Total"
+                android:hint="                   Total"
                 android:textSize="34sp" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
