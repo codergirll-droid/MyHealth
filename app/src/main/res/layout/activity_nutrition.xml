@@ -6,80 +6,91 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/txtFoods"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:text="What did you eat today? Pick from below : "
-        android:textSize="34sp" />
+        android:layout_height="match_parent">
 
-    <CheckBox
-        android:id="@+id/apple"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:text="Apple"
-        android:textSize="24sp" />
-
-    <CheckBox
-        android:id="@+id/egg"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:text="Egg"
-        android:textSize="24sp" />
-
-    <CheckBox
-        android:id="@+id/pasta"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:text="Pasta"
-        android:textSize="24sp" />
-
-    <CheckBox
-        android:id="@+id/pizza"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:text="Pizza"
-        android:textSize="24sp" />
-
-    <CheckBox
-        android:id="@+id/broccoli"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:text="Broccoli"
-        android:textSize="24sp" />
-
-    <CheckBox
-        android:id="@+id/banana"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:text="Banana"
-        android:textSize="24sp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btnBack1"
-            android:layout_width="66dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_weight="1"
-            android:baselineAlignBottom="false"
-            android:clickable="true"
-            app:backgroundTint="@color/teal_200"
-            app:srcCompat="?attr/actionModeCloseDrawable" />
+            android:orientation="vertical" >
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btnNext"
-            android:layout_width="206dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_weight="1"
-            android:clickable="true"
-            app:srcCompat="@drawable/ic_action_next" />
+            <TextView
+                android:id="@+id/txtFoods"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:text="What did you eat today? Pick from below : "
+                android:textSize="34sp" />
 
-    </LinearLayout>
+            <CheckBox
+                android:id="@+id/egg"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:text="Egg"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/apple"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:text="Apple"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/pasta"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:text="Pasta"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/broccoli"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:text="Broccoli"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/pizza"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:text="Pizza"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/banana"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:text="Banana"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnBack1"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:baselineAlignBottom="false"
+                    android:clickable="true"
+                    app:backgroundTint="@color/teal_200"
+                    app:srcCompat="?attr/actionModeCloseDrawable" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnNext"
+                    android:layout_width="206dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|end"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:srcCompat="@drawable/ic_action_next" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
