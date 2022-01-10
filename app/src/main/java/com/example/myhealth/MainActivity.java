@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.io.File;
 
 public class MainActivity extends AppCompatActivity{
@@ -66,6 +68,8 @@ public class MainActivity extends AppCompatActivity{
                 openActivity("stats");
             }
         });
+
+
 
     }
 
