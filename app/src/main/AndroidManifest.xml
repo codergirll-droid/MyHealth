@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyHealth">
         <activity
+            android:name=".LoginInfo"
+            android:exported="false" />
+        <activity
             android:name=".fragment"
             android:exported="true" />
         <activity

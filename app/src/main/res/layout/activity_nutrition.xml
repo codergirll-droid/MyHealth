@@ -18,7 +18,7 @@
             <TextView
                 android:id="@+id/txtFoods"
                 android:layout_width="match_parent"
-                android:layout_height="85dp"
+                android:layout_height="114dp"
                 android:text="What did you eat today? Pick from below : "
                 android:textSize="34sp" />
 
@@ -64,32 +64,36 @@
                 android:text="Banana"
                 android:textSize="24sp" />
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="103dp">
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnBack1"
-                    android:layout_width="66dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
+                    android:layout_width="60dp"
+                    android:layout_height="63dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp"
                     android:baselineAlignBottom="false"
                     android:clickable="true"
                     app:backgroundTint="@color/teal_200"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:srcCompat="?attr/actionModeCloseDrawable" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnNext"
-                    android:layout_width="206dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|end"
-                    android:layout_weight="1"
+                    android:layout_width="63dp"
+                    android:layout_height="58dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="20dp"
                     android:clickable="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:srcCompat="@drawable/ic_action_next" />
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
 

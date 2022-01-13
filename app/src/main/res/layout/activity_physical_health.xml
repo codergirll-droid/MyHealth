@@ -16,7 +16,7 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/txtDistance"
+                android:id="@+id/txtName"
                 android:layout_width="wrap_content"
                 android:layout_height="107dp"
                 android:layout_gravity="clip_horizontal"
