@@ -60,8 +60,8 @@ public class ArticleFragment extends Fragment {
         }
 
         //! DATA
-        articles.add(new Article("Broccoli", "fsd fsdv gfb thdca fsdvc"));
-        articles.add(new Article("Apple", "ashahs hashah ahshahs"));
+        articles.add(new Article("Broccoli", "This is the body of broccoli article"));
+        articles.add(new Article("Apple", "This is the body of apple article"));
 
     }
 
