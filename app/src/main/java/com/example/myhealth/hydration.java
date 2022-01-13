@@ -19,12 +19,17 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.ListenerRegistration;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -41,8 +46,9 @@ public class hydration extends AppCompatActivity {
     FloatingActionButton backtoMain; //button to return to main menu
 
     //**********************************************
-    FirebaseFirestore db;
-    ArrayList<user_stats> users = new ArrayList<>();
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,55 +128,43 @@ public class hydration extends AppCompatActivity {
 
     }
 
-
-    //*****************************************************
-
-/*
-    user_stats createUser(){
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        user_stats user = new user_stats();
-        user.setId(db.collection("users").document().getId());
-        return user;
-    }
-
-
-    void updateHydration(user_stats user){
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        user.setWaterDrunk(numberofTakenGlasses);
-        db.collection("users").document(user.getId()).set(user);
-    }
-
- */
-
+    //*******************************************
 
     void test(){
-        db = FirebaseFirestore.getInstance();
 
-        String id = db.collection("users").document().getId();
-        Log.d("Document id: ", id);
+        //ADD VALUE
+        rootNode = FirebaseDatabase.getInstance();
+        reference = rootNode.getReference("users");
 
-/*
-        Map<Object, Object> user = new HashMap<>();
-        user.put("Hydration", numberofTakenGlasses);
-        user.put("Name", "Ayse");
+        String name = "aab";
+        String id = "123";
+
+        user_info user = new user_info(name,3,3,3, id, numberofTakenGlasses,5,5,5,5,5,5,5,5);
+
+        reference.child(name).setValue(user);
 
 
-        db.collection("user").add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        //GET VALUE
+        Query checkUser = rootNode.getReference("users").orderByChild("userName").equalTo(name);
+        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onSuccess(DocumentReference documentReference) {
-                Toast.makeText(hydration.this, "Successful", Toast.LENGTH_SHORT).show();
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+
+                    String userStr = snapshot.child(name).child("userName").getValue(String.class);
+                    Toast.makeText(hydration.this, userStr, Toast.LENGTH_SHORT).show();
+
+                }
             }
-        })
-.addOnFailureListener(new OnFailureListener() {
-    @Override
-    public void onFailure(@NonNull Exception e) {
-        Toast.makeText(hydration.this, "Failed", Toast.LENGTH_SHORT).show();
 
-    }
-});
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
 
- */
+        //SET VALUE
+        reference.child(name).child("userName").setValue("value changed");
 
     }
 
